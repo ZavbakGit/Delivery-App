@@ -16,7 +16,43 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const TestPageRed(),
+    );
+  }
+}
+
+class TestPageGreen extends StatelessWidget {
+  const TestPageGreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Colors.green, // Устанавливаем зеленый цвет фона
+        ),
+        child: Center(
+          child: Text('Зеленый экран'),
+        ),
+      ),
+    );
+  }
+}
+
+class TestPageRed extends StatelessWidget {
+  const TestPageRed({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          color: Colors.red, // Устанавливаем зеленый цвет фона
+        ),
+        child: Center(
+          child: Text('Красный экран'),
+        ),
+      ),
     );
   }
 }
