@@ -10,7 +10,7 @@ Future<void> main() async {
 }
 
 class AnitApp extends StatelessWidget {
-  const AnitApp({Key? key}) : super(key: key);
+  const AnitApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,7 @@ class AnitApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      // routeInformationParser: router.routeInformationParser,
-      // routerDelegate: router.routerDelegate,
-      title: 'flutter_riverpod + go_router Demo',
+      title: 'Delivery app',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

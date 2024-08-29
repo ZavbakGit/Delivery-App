@@ -2,19 +2,22 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
 part 'models.freezed.dart';
+part 'models.g.dart';
 
 @freezed
-class UserDataClass with _$UserDataClass {
-  const factory UserDataClass({
+class User with _$User {
+  const factory User({
     required String name,
     required String id,
-  }) = _UserDataClass;
+  }) = _User;
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
 
 class AppModel extends ChangeNotifier {
-  UserDataClass? _user;
-  UserDataClass? get user => _user;
-  set user(UserDataClass? value) {
+  User? _user;
+  User? get user => _user;
+  set user(User? value) {
     _user = value;
     notifyListeners();
   }

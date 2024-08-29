@@ -14,38 +14,43 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-/// @nodoc
-mixin _$UserDataClass {
-  String get name => throw _privateConstructorUsedError;
-  String get id => throw _privateConstructorUsedError;
-
-  /// Create a copy of UserDataClass
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UserDataClassCopyWith<UserDataClass> get copyWith =>
-      throw _privateConstructorUsedError;
+User _$UserFromJson(Map<String, dynamic> json) {
+  return _User.fromJson(json);
 }
 
 /// @nodoc
-abstract class $UserDataClassCopyWith<$Res> {
-  factory $UserDataClassCopyWith(
-          UserDataClass value, $Res Function(UserDataClass) then) =
-      _$UserDataClassCopyWithImpl<$Res, UserDataClass>;
+mixin _$User {
+  String get name => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+
+  /// Serializes this User to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of User
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UserCopyWith<$Res> {
+  factory $UserCopyWith(User value, $Res Function(User) then) =
+      _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call({String name, String id});
 }
 
 /// @nodoc
-class _$UserDataClassCopyWithImpl<$Res, $Val extends UserDataClass>
-    implements $UserDataClassCopyWith<$Res> {
-  _$UserDataClassCopyWithImpl(this._value, this._then);
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
+  _$UserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of UserDataClass
+  /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -67,25 +72,23 @@ class _$UserDataClassCopyWithImpl<$Res, $Val extends UserDataClass>
 }
 
 /// @nodoc
-abstract class _$$UserDataClassImplCopyWith<$Res>
-    implements $UserDataClassCopyWith<$Res> {
-  factory _$$UserDataClassImplCopyWith(
-          _$UserDataClassImpl value, $Res Function(_$UserDataClassImpl) then) =
-      __$$UserDataClassImplCopyWithImpl<$Res>;
+abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
+  factory _$$UserImplCopyWith(
+          _$UserImpl value, $Res Function(_$UserImpl) then) =
+      __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String id});
 }
 
 /// @nodoc
-class __$$UserDataClassImplCopyWithImpl<$Res>
-    extends _$UserDataClassCopyWithImpl<$Res, _$UserDataClassImpl>
-    implements _$$UserDataClassImplCopyWith<$Res> {
-  __$$UserDataClassImplCopyWithImpl(
-      _$UserDataClassImpl _value, $Res Function(_$UserDataClassImpl) _then)
+class __$$UserImplCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$UserImpl>
+    implements _$$UserImplCopyWith<$Res> {
+  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of UserDataClass
+  /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -93,7 +96,7 @@ class __$$UserDataClassImplCopyWithImpl<$Res>
     Object? name = null,
     Object? id = null,
   }) {
-    return _then(_$UserDataClassImpl(
+    return _then(_$UserImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -107,11 +110,12 @@ class __$$UserDataClassImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
+@JsonSerializable()
+class _$UserImpl with DiagnosticableTreeMixin implements _User {
+  const _$UserImpl({required this.name, required this.id});
 
-class _$UserDataClassImpl
-    with DiagnosticableTreeMixin
-    implements _UserDataClass {
-  const _$UserDataClassImpl({required this.name, required this.id});
+  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserImplFromJson(json);
 
   @override
   final String name;
@@ -120,14 +124,14 @@ class _$UserDataClassImpl
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'UserDataClass(name: $name, id: $id)';
+    return 'User(name: $name, id: $id)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'UserDataClass'))
+      ..add(DiagnosticsProperty('type', 'User'))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('id', id));
   }
@@ -136,37 +140,46 @@ class _$UserDataClassImpl
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UserDataClassImpl &&
+            other is _$UserImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.id, id) || other.id == id));
   }
 
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, id);
 
-  /// Create a copy of UserDataClass
+  /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserDataClassImplCopyWith<_$UserDataClassImpl> get copyWith =>
-      __$$UserDataClassImplCopyWithImpl<_$UserDataClassImpl>(this, _$identity);
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UserImplToJson(
+      this,
+    );
+  }
 }
 
-abstract class _UserDataClass implements UserDataClass {
-  const factory _UserDataClass(
-      {required final String name,
-      required final String id}) = _$UserDataClassImpl;
+abstract class _User implements User {
+  const factory _User({required final String name, required final String id}) =
+      _$UserImpl;
+
+  factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 
   @override
   String get name;
   @override
   String get id;
 
-  /// Create a copy of UserDataClass
+  /// Create a copy of User
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserDataClassImplCopyWith<_$UserDataClassImpl> get copyWith =>
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
