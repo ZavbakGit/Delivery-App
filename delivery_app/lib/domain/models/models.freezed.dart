@@ -17,6 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$UserDataClass {
   String get name => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
 
   /// Create a copy of UserDataClass
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +32,7 @@ abstract class $UserDataClassCopyWith<$Res> {
           UserDataClass value, $Res Function(UserDataClass) then) =
       _$UserDataClassCopyWithImpl<$Res, UserDataClass>;
   @useResult
-  $Res call({String name});
+  $Res call({String name, String id});
 }
 
 /// @nodoc
@@ -50,11 +51,16 @@ class _$UserDataClassCopyWithImpl<$Res, $Val extends UserDataClass>
   @override
   $Res call({
     Object? name = null,
+    Object? id = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -68,7 +74,7 @@ abstract class _$$UserDataClassImplCopyWith<$Res>
       __$$UserDataClassImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name});
+  $Res call({String name, String id});
 }
 
 /// @nodoc
@@ -85,11 +91,16 @@ class __$$UserDataClassImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
+    Object? id = null,
   }) {
     return _then(_$UserDataClassImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -97,15 +108,28 @@ class __$$UserDataClassImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$UserDataClassImpl implements _UserDataClass {
-  const _$UserDataClassImpl({required this.name});
+class _$UserDataClassImpl
+    with DiagnosticableTreeMixin
+    implements _UserDataClass {
+  const _$UserDataClassImpl({required this.name, required this.id});
 
   @override
   final String name;
+  @override
+  final String id;
 
   @override
-  String toString() {
-    return 'UserDataClass(name: $name)';
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'UserDataClass(name: $name, id: $id)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'UserDataClass'))
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('id', id));
   }
 
   @override
@@ -113,11 +137,12 @@ class _$UserDataClassImpl implements _UserDataClass {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UserDataClassImpl &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.id, id) || other.id == id));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name);
+  int get hashCode => Object.hash(runtimeType, name, id);
 
   /// Create a copy of UserDataClass
   /// with the given fields replaced by the non-null parameter values.
@@ -129,11 +154,14 @@ class _$UserDataClassImpl implements _UserDataClass {
 }
 
 abstract class _UserDataClass implements UserDataClass {
-  const factory _UserDataClass({required final String name}) =
-      _$UserDataClassImpl;
+  const factory _UserDataClass(
+      {required final String name,
+      required final String id}) = _$UserDataClassImpl;
 
   @override
   String get name;
+  @override
+  String get id;
 
   /// Create a copy of UserDataClass
   /// with the given fields replaced by the non-null parameter values.
