@@ -1,6 +1,7 @@
 import 'package:delivery_app/di/injection_container.dart';
 import 'package:delivery_app/domain/models/models.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -12,7 +13,8 @@ class LoginPage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {
               AppModel appModel = sl();
-              appModel.isLogged = !appModel.isLogged;
+              appModel.isLoggedIn = true;
+              context.pushReplacement('/');
             },
             child: const Text(
               'Login',
