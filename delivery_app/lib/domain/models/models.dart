@@ -22,10 +22,10 @@ class AppModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool _isLoggedIn = false;
-  bool get isLoggedIn => _isLoggedIn;
-  set isLoggedIn(bool value) {
-    _isLoggedIn = value;
+  bool _isRegistered = false;
+  bool get isRegistered => _isRegistered;
+  set isRegistered(bool value) {
+    _isRegistered = value;
     notifyListeners();
   }
 }

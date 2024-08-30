@@ -1,28 +1,21 @@
 import 'dart:async';
 
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../core/arch/sr_bloc/sr_bloc.dart';
+import 'home_page_bloc_models.dart';
 
-
-class HomeageBloc extends SrBloc<MainPageEvent, MainPageState, MainPageSR> {
-  final AppModel appModel;
-
-  MainPageBloc({
-    required this.appModel,
-  }) : super(const MainPageState.empty()) {
+class HomePageBloc extends SrBloc<HomePageEvent, HomePageState, HomePageSR> {
+  HomePageBloc() : super(const HomePageState.empty()) {
     on<EvInit>(_init);
-    on<EvExit>(_exit);
   }
 
   FutureOr<void> _init(
     EvInit event,
-    Emitter<MainPageState> emit,
+    Emitter<HomePageState> emit,
   ) async {
-    emit(MainPageState.data(user: appModel.remoteConfig!.user.name!));
-  }
-
-  FutureOr<void> _exit(
-    EvExit event,
-    Emitter<MainPageState> emit,
-  ) async {
-    appModel.logout();
+    emit(const HomePageState.empty());
+    await Future.delayed(const Duration(seconds: 2));
+    addSr(const HomePageSR.isRegistered());
+    // addSr(const HomePageSR.isNotRegistered());
   }
 }

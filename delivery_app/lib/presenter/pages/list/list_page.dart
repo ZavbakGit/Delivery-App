@@ -15,7 +15,7 @@ class ListPage extends StatelessWidget {
           ElevatedButton(
               onPressed: () {
                 AppModel appModel = sl();
-                appModel.isLoggedIn = false;
+                appModel.isRegistered = false;
               },
               child: const Text(
                 'Log out',

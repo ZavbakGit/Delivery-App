@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {
               AppModel appModel = sl();
-              appModel.isLoggedIn = true;
+              appModel.isRegistered = true;
               context.pushReplacement('/');
             },
             child: const Text(

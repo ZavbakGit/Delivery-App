@@ -1,3 +1,6 @@
+import 'package:delivery_app/presenter/core/arch/sr_bloc/sr_mixin.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 /// Абстракция для расширения возможностей блок для отправки SingleResult - событий которые необходимо отрендерить 1 раз
 /// - Навгиация
 /// - Тост

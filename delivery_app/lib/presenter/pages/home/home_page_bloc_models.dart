@@ -15,6 +15,6 @@ class HomePageEvent with _$HomePageEvent {
 
 @freezed
 class HomePageSR with _$HomePageSR {
-  const factory HomePageSR.isLoggedIn() = _SrIsLoggedIn;
-  const factory HomePageSR.isNotLoggedIn() = _SrIsNotLoggedIn;
+  const factory HomePageSR.isRegistered() = _SrIsLoggedIn;
+  const factory HomePageSR.isNotRegistered() = _SrIsNotLoggedIn;
 }
