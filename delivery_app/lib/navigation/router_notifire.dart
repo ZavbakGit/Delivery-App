@@ -12,6 +12,7 @@ class RouterNotifier extends ChangeNotifier {
   }
 
   String? redirect(GoRouterState stateRouter) {
-    return appModel.isRegistered ? null : '/login';
+    // return appModel.isRegistered ? null : '/';
+    return null;
   }
 }

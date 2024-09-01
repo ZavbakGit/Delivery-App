@@ -1,8 +1,10 @@
 import 'package:delivery_app/navigation/router_notifire.dart';
 import 'package:delivery_app/presenter/pages/home/home_page.dart';
 import 'package:delivery_app/presenter/pages/list/list_page.dart';
-import 'package:delivery_app/presenter/pages/login/login_page.dart';
+import 'package:delivery_app/presenter/pages/registration/registration_page.dart';
 import 'package:go_router/go_router.dart';
+
+import '../di/injection_container.dart';
 
 class AppRouter {
   final RouterNotifier routerNotifier;
@@ -22,14 +24,16 @@ class AppRouter {
         builder: (context, _) => const HomePage(),
       ),
       GoRoute(
-        name: "login",
-        path: "/login",
-        builder: (context, _) => const LoginPage(),
+        name: "registration",
+        path: "/registration",
+        builder: (context, _) => const RegistrationPage(),
       ),
       GoRoute(
         name: "list",
         path: "/list",
-        builder: (context, _) => const ListPage(),
+        builder: (context, _) => ListPage(
+          repository: sl(),
+        ),
       ),
     ], // All the routes can be found there
   );

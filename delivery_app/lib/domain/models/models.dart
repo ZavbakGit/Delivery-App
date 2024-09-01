@@ -22,10 +22,5 @@ class AppModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool _isRegistered = false;
-  bool get isRegistered => _isRegistered;
-  set isRegistered(bool value) {
-    _isRegistered = value;
-    notifyListeners();
-  }
+  bool get isRegistered => user != null;
 }

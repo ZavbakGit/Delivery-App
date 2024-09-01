@@ -29,7 +29,7 @@ class CacheDatasourse {
     );
   }
 
-  removeConnectionConfig() {
+  Future<void> removeUser() {
     return sharedPreferences.remove(_userKey);
   }
 }

@@ -331,39 +331,39 @@ abstract class EvInit implements HomePageEvent {
 mixin _$HomePageSR {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() isLoggedIn,
-    required TResult Function() isNotLoggedIn,
+    required TResult Function() isRegistered,
+    required TResult Function() isNotRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? isLoggedIn,
-    TResult? Function()? isNotLoggedIn,
+    TResult? Function()? isRegistered,
+    TResult? Function()? isNotRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? isLoggedIn,
-    TResult Function()? isNotLoggedIn,
+    TResult Function()? isRegistered,
+    TResult Function()? isNotRegistered,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SrIsLoggedIn value) isLoggedIn,
-    required TResult Function(_SrIsNotLoggedIn value) isNotLoggedIn,
+    required TResult Function(_SrIsLoggedIn value) isRegistered,
+    required TResult Function(_SrIsNotLoggedIn value) isNotRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult? Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult? Function(_SrIsLoggedIn value)? isRegistered,
+    TResult? Function(_SrIsNotLoggedIn value)? isNotRegistered,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult Function(_SrIsLoggedIn value)? isRegistered,
+    TResult Function(_SrIsNotLoggedIn value)? isNotRegistered,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -416,7 +416,7 @@ class _$SrIsLoggedInImpl implements _SrIsLoggedIn {
 
   @override
   String toString() {
-    return 'HomePageSR.isLoggedIn()';
+    return 'HomePageSR.isRegistered()';
   }
 
   @override
@@ -431,30 +431,30 @@ class _$SrIsLoggedInImpl implements _SrIsLoggedIn {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() isLoggedIn,
-    required TResult Function() isNotLoggedIn,
+    required TResult Function() isRegistered,
+    required TResult Function() isNotRegistered,
   }) {
-    return isLoggedIn();
+    return isRegistered();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? isLoggedIn,
-    TResult? Function()? isNotLoggedIn,
+    TResult? Function()? isRegistered,
+    TResult? Function()? isNotRegistered,
   }) {
-    return isLoggedIn?.call();
+    return isRegistered?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? isLoggedIn,
-    TResult Function()? isNotLoggedIn,
+    TResult Function()? isRegistered,
+    TResult Function()? isNotRegistered,
     required TResult orElse(),
   }) {
-    if (isLoggedIn != null) {
-      return isLoggedIn();
+    if (isRegistered != null) {
+      return isRegistered();
     }
     return orElse();
   }
@@ -462,30 +462,30 @@ class _$SrIsLoggedInImpl implements _SrIsLoggedIn {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SrIsLoggedIn value) isLoggedIn,
-    required TResult Function(_SrIsNotLoggedIn value) isNotLoggedIn,
+    required TResult Function(_SrIsLoggedIn value) isRegistered,
+    required TResult Function(_SrIsNotLoggedIn value) isNotRegistered,
   }) {
-    return isLoggedIn(this);
+    return isRegistered(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult? Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult? Function(_SrIsLoggedIn value)? isRegistered,
+    TResult? Function(_SrIsNotLoggedIn value)? isNotRegistered,
   }) {
-    return isLoggedIn?.call(this);
+    return isRegistered?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult Function(_SrIsLoggedIn value)? isRegistered,
+    TResult Function(_SrIsNotLoggedIn value)? isNotRegistered,
     required TResult orElse(),
   }) {
-    if (isLoggedIn != null) {
-      return isLoggedIn(this);
+    if (isRegistered != null) {
+      return isRegistered(this);
     }
     return orElse();
   }
@@ -521,7 +521,7 @@ class _$SrIsNotLoggedInImpl implements _SrIsNotLoggedIn {
 
   @override
   String toString() {
-    return 'HomePageSR.isNotLoggedIn()';
+    return 'HomePageSR.isNotRegistered()';
   }
 
   @override
@@ -536,30 +536,30 @@ class _$SrIsNotLoggedInImpl implements _SrIsNotLoggedIn {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() isLoggedIn,
-    required TResult Function() isNotLoggedIn,
+    required TResult Function() isRegistered,
+    required TResult Function() isNotRegistered,
   }) {
-    return isNotLoggedIn();
+    return isNotRegistered();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? isLoggedIn,
-    TResult? Function()? isNotLoggedIn,
+    TResult? Function()? isRegistered,
+    TResult? Function()? isNotRegistered,
   }) {
-    return isNotLoggedIn?.call();
+    return isNotRegistered?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? isLoggedIn,
-    TResult Function()? isNotLoggedIn,
+    TResult Function()? isRegistered,
+    TResult Function()? isNotRegistered,
     required TResult orElse(),
   }) {
-    if (isNotLoggedIn != null) {
-      return isNotLoggedIn();
+    if (isNotRegistered != null) {
+      return isNotRegistered();
     }
     return orElse();
   }
@@ -567,30 +567,30 @@ class _$SrIsNotLoggedInImpl implements _SrIsNotLoggedIn {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_SrIsLoggedIn value) isLoggedIn,
-    required TResult Function(_SrIsNotLoggedIn value) isNotLoggedIn,
+    required TResult Function(_SrIsLoggedIn value) isRegistered,
+    required TResult Function(_SrIsNotLoggedIn value) isNotRegistered,
   }) {
-    return isNotLoggedIn(this);
+    return isNotRegistered(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult? Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult? Function(_SrIsLoggedIn value)? isRegistered,
+    TResult? Function(_SrIsNotLoggedIn value)? isNotRegistered,
   }) {
-    return isNotLoggedIn?.call(this);
+    return isNotRegistered?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_SrIsLoggedIn value)? isLoggedIn,
-    TResult Function(_SrIsNotLoggedIn value)? isNotLoggedIn,
+    TResult Function(_SrIsLoggedIn value)? isRegistered,
+    TResult Function(_SrIsNotLoggedIn value)? isNotRegistered,
     required TResult orElse(),
   }) {
-    if (isNotLoggedIn != null) {
-      return isNotLoggedIn(this);
+    if (isNotRegistered != null) {
+      return isNotRegistered(this);
     }
     return orElse();
   }

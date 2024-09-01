@@ -1,9 +1,11 @@
-import 'package:delivery_app/di/injection_container.dart';
-import 'package:delivery_app/domain/models/models.dart';
+import 'package:delivery_app/domain/repositories/repository.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ListPage extends StatelessWidget {
-  const ListPage({super.key});
+  const ListPage({super.key, required this.repository});
+
+  final Repository repository;
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +15,10 @@ class ListPage extends StatelessWidget {
         children: [
           const Center(child: Text('List Page')),
           ElevatedButton(
-              onPressed: () {
-                AppModel appModel = sl();
-                appModel.isRegistered = false;
+              onPressed: () async {
+                final either = await repository.removeUser();
+                await Future.delayed(const Duration(seconds: 1));
+                context.push('/');
               },
               child: const Text(
                 'Log out',
